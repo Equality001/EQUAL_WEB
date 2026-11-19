@@ -1,0 +1,7 @@
+*.backup*
+*.bak
+.env
+*.key
+*.pem
+*secret*
+*token*
