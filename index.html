@@ -131,18 +131,281 @@ footer{background:#000000;color:#d1d5db;text-align:center;padding:22px 12px;font
 .header-subrow .top-tools{margin:0}
 .header-subrow select{max-width:110px}
 /* EQUAL WEB THAI SERVICE NOTE */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Thai:wght@400;500;600;700&display=swap');
 .service-note{
 font-family:'Noto Serif Thai',serif;
-font-size:clamp(12px,3vw,15px);
-font-weight:600;
+font-size:clamp(14px,3.8vw,18px);
+font-weight:700;
 color:#ffffff;
+background:#2563eb;
 text-align:center;
-margin:7px auto 2px;
-line-height:1.7;
+width:fit-content;
+max-width:calc(100% - 24px);
+margin:10px auto 5px;
+padding:9px 16px;
+border-radius:9px;
+line-height:1.8;
+box-sizing:border-box;
 }
 
+/* EQUAL WEB CONTACT FIVE BUTTONS */
+.contact-bar{
+  display:grid !important;
+  grid-template-columns:repeat(5,minmax(0,1fr));
+  gap:5px;
+  width:100%;
+  box-sizing:border-box;
+}
+.contact-bar .contact-link{
+  min-width:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:5px 2px;
+  font-size:0 !important;
+  line-height:0;
+  box-sizing:border-box;
+}
+.contact-bar .contact-link svg{
+  display:block;
+  width:28px;
+  height:28px;
+  flex:0 0 28px;
+}
+
+/* THAI FLAG LOW HEIGHT FULL WIDTH */
+.service-note{
+  font-family:'Noto Serif Thai',serif !important;
+  font-size:clamp(13px,3.7vw,17px) !important;
+  font-weight:700 !important;
+  color:#ffffff !important;
+  background:linear-gradient(
+    to bottom,
+    #DA291C 0%,#DA291C 10%,
+    #FFFFFF 10%,#FFFFFF 25%,
+    #241D4F 25%,#241D4F 75%,
+    #FFFFFF 75%,#FFFFFF 90%,
+    #DA291C 90%,#DA291C 100%
+  ) !important;
+  text-align:center;
+  width:100% !important;
+  max-width:100% !important;
+  min-height:0 !important;
+  height:auto !important;
+  margin:4px 0 2px !important;
+  padding:2px 5px !important;
+  border:0 !important;
+  border-radius:0 !important;
+  line-height:1.5 !important;
+  display:block !important;
+  box-sizing:border-box;
+  text-shadow:0 1px 2px #000000;
+}
+
+/* THAI TEXT HORIZONTAL STRETCH */
+.service-note{
+  overflow:hidden !important;
+  padding:0 !important;
+  min-height:0 !important;
+  height:auto !important;
+  background:linear-gradient(
+    to bottom,
+    #DA291C 0%,#DA291C 10%,
+    #FFFFFF 10%,#FFFFFF 25%,
+    #241D4F 25%,#241D4F 75%,
+    #FFFFFF 75%,#FFFFFF 90%,
+    #DA291C 90%,#DA291C 100%
+  ) !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+}
+.service-note .service-note-text{
+  display:block !important;
+  width:100% !important;
+  padding:3px 2px !important;
+  white-space:normal !important;
+  text-align:justify !important;
+  text-align-last:justify !important;
+  text-justify:inter-character !important;
+  transform:none !important;
+  font-family:'Noto Serif Thai',serif !important;
+  font-size:clamp(17px,5.2vw,24px) !important;
+  font-weight:700 !important;
+  color:#FFFFFF !important;
+  line-height:1.5 !important;
+  letter-spacing:0 !important;
+  text-shadow:0 1px 2px #000000;
+  box-sizing:border-box;
+}
+
+/* THAI FLAG INSIDE EACH LETTER */
+.service-note .service-note-text .thai-flag-letter {
+  display: inline-block !important;
+  vertical-align: baseline !important;
+  background-image: linear-gradient(
+    to bottom,
+    #DA291C 0%, 20%,
+    #FFFFFF 20%, 40%,
+    #241D4F 40%, 60%,
+    #FFFFFF 60%, 80%,
+    #DA291C 80%, 100%
+  ) !important;
+  background-size: 100% 100% !important;
+  background-repeat: no-repeat !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-box-decoration-break: clone !important;
+  box-decoration-break: clone !important;
+  color: transparent !important;
+  -webkit-text-fill-color: transparent !important;
+  text-shadow: none !important;
+}
+
+
+/* FINAL BLACK BACKGROUND - FLAG COLORS LETTERS ONLY */
+.service-note,
+.service-note::before,
+.service-note::after {
+  background: #000000 !important;
+  background-image: none !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+.service-note {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 4px 0 2px !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+}
+
+.service-note .service-note-text {
+  display: block !important;
+  width: 100% !important;
+  background: #000000 !important;
+  background-image: none !important;
+  color: #FFFFFF !important;
+  -webkit-text-fill-color: #FFFFFF;
+  text-shadow: none !important;
+}
+
+.service-note .service-note-text .thai-flag-letter {
+  display: inline-block !important;
+  background-image: linear-gradient(
+    to bottom,
+    #DA291C 0%, #DA291C 16.6667%,
+    #FFFFFF 16.6667%, #FFFFFF 33.3333%,
+    #241D4F 33.3333%, #241D4F 66.6667%,
+    #FFFFFF 66.6667%, #FFFFFF 83.3333%,
+    #DA291C 83.3333%, #DA291C 100%
+  ) !important;
+  background-clip: text !important;
+  -webkit-background-clip: text !important;
+  color: transparent !important;
+  -webkit-text-fill-color: transparent !important;
+  text-shadow: none !important;
+}
+
+
+/* THAI FLAG COLORS INSIDE EACH LETTER */
+.service-note,
+.service-note::before,
+.service-note::after {
+  background: #000000 !important;
+  background-image: none !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+.service-note {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 4px 0 2px !important;
+  padding: 2px 4px !important;
+  border-radius: 0 !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.service-note .service-note-text {
+  display: block !important;
+  width: 100% !important;
+  background: #000000 !important;
+  background-image: none !important;
+  text-align: center !important;
+  font-family: 'Noto Serif Thai', serif !important;
+  font-size: clamp(17px, 5.2vw, 24px) !important;
+  font-weight: 700 !important;
+  line-height: 1.6 !important;
+}
+
+.service-note .thai-flag-letter {
+  display: inline-block !important;
+  background-image: linear-gradient(
+    to bottom,
+    #DA291C 0%, 20%,
+    #FFFFFF 20%, 40%,
+    #241D4F 40%, 60%,
+    #FFFFFF 60%, 80%,
+    #DA291C 80%, 100%
+  ) !important;
+  background-size: 100% 100% !important;
+  background-repeat: no-repeat !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  color: transparent !important;
+  -webkit-text-fill-color: transparent !important;
+  text-shadow: none !important;
+}
+
+
+
+/* EQUAL WEB FINAL THAI FLAG LETTER RENDER */
+.service-note,
+.service-note::before,
+.service-note::after {
+  background: #000000 !important;
+  background-image: none !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+.service-note {
+  background: #000000 !important;
+  width: 100% !important;
+  max-width: 100% !important;
+}
+.service-note .service-note-text {
+  background: #000000 !important;
+  color: #ffffff !important;
+  text-align: center !important;
+}
+.service-note .thai-flag-letter {
+  display: inline-block !important;
+  vertical-align: baseline !important;
+  background-image: linear-gradient(
+    to bottom,
+    #DA291C 0%, 20%,
+    #FFFFFF 20%, 40%,
+    #241D4F 40%, 60%,
+    #FFFFFF 60%, 80%,
+    #DA291C 80%, 100%
+  ) !important;
+  background-size: 100% 100% !important;
+  background-repeat: no-repeat !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  color: transparent !important;
+  -webkit-text-fill-color: transparent !important;
+  text-shadow: none !important;
+}
 </style>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Thai:wght@400;700&display=swap" rel="stylesheet">
+
 </head>
 <body>
 <header class="site-header"><div class="header-main">
@@ -176,8 +439,19 @@ line-height:1.7;
       <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#ffffff"/><path fill="#000000" d="M7 3.8 10 7l-1.7 2c1.1 2.3 2.2 3.4 4.5 4.5l2-1.7 3.2 3-1.8 2.7c-.5.8-1.6.9-2.5.5-4.4-2-7.4-5-9.4-9.4-.4-.9-.3-2 .5-2.5z"/></svg>
       Phone
     </a>
-  </div>
-<div class="service-note" lang="th">รับทำเว็บไซต์สำหรับธุรกิจและร้านค้า</div></header>
+
+    <a class="contact-link" href="https://www.tiktok.com/@equality.phonesp" target="_blank" rel="noopener" aria-label="TikTok">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <circle cx="12" cy="12" r="11" fill="#000000"/>
+        <path d="M14 4v10.2a3.2 3.2 0 1 1-2.5-3.1" fill="none" stroke="#25F4EE" stroke-width="2.8" stroke-linecap="round"/>
+        <path d="M15 4.5c.3 2.1 1.5 3.3 3.5 3.6" fill="none" stroke="#FE2C55" stroke-width="2.8" stroke-linecap="round"/>
+        <path d="M13 3.5v10.2a3.2 3.2 0 1 1-2.5-3.1" fill="none" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round"/>
+        <path d="M14 4c.3 2.1 1.5 3.3 3.5 3.6" fill="none" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round"/>
+      </svg>
+      TikTok
+    </a>
+</div>
+<div class="service-note" lang="th"><span class="service-note-text">รับทำเว็บไซต์สำหรับธุรกิจและร้านค้า</span></div></header>
 
 <div class="menu-wrap">
   <div class="menu-title"><span data-i18n="menuHeading">เริ่มสร้างเว็บไซต์ของคุณ</span></div>
@@ -259,61 +533,61 @@ line-height:1.7;
 
 <footer>© <span id="year"></span> EQUAL WEB. <span data-i18n="footerText">สงวนลิขสิทธิ์</span><br>Your Business. Your Website.</footer>
 
+
+
+
+
+
+
 <script>
-const translations={
-th:{
-menuHeading:"เริ่มสร้างเว็บไซต์ของคุณ",
-menuHome:"หน้าแรก",menuServices:"บริการ",menuPricing:"ราคา",menuSamples:"ตัวอย่าง",menuAbout:"เกี่ยวกับเรา",menuContact:"ติดต่อ",menuFaq:"คำถามที่พบบ่อย",
-heroTitle:"เว็บไซต์ที่ดี<br>เริ่มต้นธุรกิจที่ดีกว่า",heroText:"สร้างเว็บไซต์สำหรับธุรกิจของคุณ ให้ลูกค้าค้นหาคุณได้ง่ายขึ้น พร้อมดีไซน์ที่สวยงามและใช้งานได้บนมือถือ",heroButton:"ดูบริการของเรา",
-servicesTitle:"บริการของเรา",servicesSubtitle:"เครื่องมือออนไลน์สำหรับธุรกิจของคุณ",service1Title:"ออกแบบเว็บไซต์",service1Text:"เว็บไซต์สวยงาม ทันสมัย รองรับโทรศัพท์มือถือและคอมพิวเตอร์",service2Title:"เว็บไซต์ธุรกิจ",service2Text:"แสดงสินค้า บริการ ข้อมูลร้านค้า และช่องทางติดต่อลูกค้า",service3Title:"ดูแลเว็บไซต์รายเดือน",service3Text:"ช่วยดูแลและอัปเดตเนื้อหาเว็บไซต์ตามแพ็กเกจที่เลือก",
-pricingTitle:"แพ็กเกจราคา",pricingSubtitle:"เลือกแพ็กเกจที่เหมาะกับธุรกิจของคุณ",starterDesc:"เหมาะสำหรับร้านค้าขนาดเล็ก",starter1:"เว็บไซต์หน้าเดียว",starter2:"รองรับมือถือ",starter3:"ข้อมูลติดต่อร้านค้า",businessDesc:"เหมาะสำหรับธุรกิจที่ต้องการข้อมูลครบถ้วน",business1:"หลายหน้าเว็บไซต์",business2:"บริการและสินค้า",business3:"ช่องทางติดต่อลูกค้า",premiumDesc:"เหมาะสำหรับธุรกิจที่ต้องการเว็บไซต์เพิ่มเติม",premium1:"ออกแบบตามความต้องการ",premium2:"ฟังก์ชันเพิ่มเติม",premium3:"วางแผนการดูแลเว็บไซต์",priceNote:"ราคาเริ่มต้นเป็นตัวอย่าง ราคาจริงขึ้นอยู่กับรายละเอียดงาน โดเมนและโฮสติ้งอาจมีค่าใช้จ่ายเพิ่มเติม",
-samplesTitle:"ตัวอย่างเว็บไซต์",samplesSubtitle:"ตัวอย่างรูปแบบเว็บไซต์สำหรับธุรกิจ",sample1Title:"ร้านค้าออนไลน์",sample1Text:"แสดงสินค้า รายละเอียด และช่องทางสั่งซื้อ",sample2Title:"เว็บไซต์ธุรกิจ",sample2Text:"แนะนำธุรกิจ บริการ และข้อมูลติดต่อ",sample3Title:"เว็บไซต์บริการ",sample3Text:"นำเสนอบริการ ราคา และช่องทางติดต่อ",sampleNote:"ตัวอย่างเหล่านี้เป็นแนวทางเบื้องต้น สามารถปรับรูปแบบตามธุรกิจได้",
-aboutTitle:"เกี่ยวกับเรา",aboutSubtitle:"เว็บไซต์ที่เหมาะกับธุรกิจของคุณ",aboutText1:"EQUAL WEB ให้บริการออกแบบและจัดทำเว็บไซต์สำหรับร้านค้าและธุรกิจ โดยเน้นการใช้งานง่าย ดูดีบนโทรศัพท์มือถือ และช่วยให้ลูกค้าติดต่อธุรกิจได้สะดวก",aboutText2:"รองรับภาษาไทย ภาษาอังกฤษ และภาษาพม่า พร้อมวางแผนรูปแบบเว็บไซต์ให้เหมาะสมกับความต้องการของแต่ละธุรกิจ",
-contactTitle:"พร้อมเริ่มต้นเว็บไซต์ของคุณหรือยัง?",contactText:"พูดคุยเกี่ยวกับธุรกิจและความต้องการของคุณ เพื่อวางแผนเว็บไซต์ที่เหมาะสม",
-faqTitle:"คำถามที่พบบ่อย",faqSubtitle:"ข้อมูลเบื้องต้นก่อนเริ่มทำเว็บไซต์",faqQ1:"ใช้เวลาทำเว็บไซต์นานเท่าไร?",faqA1:"ระยะเวลาขึ้นอยู่กับจำนวนหน้า เนื้อหา และฟังก์ชันที่ต้องการ โดยจะแจ้งกำหนดการหลังสรุปรายละเอียดงาน",faqQ2:"เว็บไซต์รองรับโทรศัพท์มือถือหรือไม่?",faqA2:"รองรับการแสดงผลบนโทรศัพท์มือถือ แท็บเล็ต และคอมพิวเตอร์",faqQ3:"สามารถเปลี่ยนภาษาได้หรือไม่?",faqA3:"เว็บไซต์ตัวอย่างนี้รองรับภาษาไทย อังกฤษ และမြန်မာ",faqQ4:"ราคาในแพ็กเกจรวมโดเมนและโฮสติ้งหรือไม่?",faqA4:"ราคาเริ่มต้นยังไม่รวมค่าโดเมนและโฮสติ้ง หากมีค่าใช้จ่ายเพิ่มเติมจะแจ้งให้ทราบก่อนเริ่มงาน",footerText:"สงวนลิขสิทธิ์"
-},
-en:{
-menuHeading:"Start Building Your Website",
-menuHome:"Home",menuServices:"Services",menuPricing:"Pricing",menuSamples:"Samples",menuAbout:"About",menuContact:"Contact",menuFaq:"FAQ",
-heroTitle:"A Better Website<br>For A Better Business",heroText:"Build a website for your business. Help customers find you more easily with a modern, mobile-friendly design.",heroButton:"Explore Services",
-servicesTitle:"Our Services",servicesSubtitle:"Online solutions for your business",service1Title:"Website Design",service1Text:"Modern, attractive websites for mobile phones and computers.",service2Title:"Business Website",service2Text:"Showcase products, services, shop information and customer contact options.",service3Title:"Monthly Maintenance",service3Text:"Website care and content updates based on your selected plan.",
-pricingTitle:"Our Packages",pricingSubtitle:"Choose a package that fits your business",starterDesc:"For small shops and businesses",starter1:"One-page website",starter2:"Mobile-friendly design",starter3:"Business contact information",businessDesc:"For businesses needing more information",business1:"Multi-page website",business2:"Products and services",business3:"Customer contact options",premiumDesc:"For businesses needing a customized website",premium1:"Custom design",premium2:"Additional features",premium3:"Website maintenance planning",priceNote:"Starting prices are examples. Final prices depend on project requirements. Domain and hosting may cost extra.",
-samplesTitle:"Website Samples",samplesSubtitle:"Example website styles for businesses",sample1Title:"Online Shop",sample1Text:"Display products, details and ordering information",sample2Title:"Business Website",sample2Text:"Introduce your business, services and contact details",sample3Title:"Service Website",sample3Text:"Present services, prices and contact options",sampleNote:"These are sample concepts and can be adapted to your business.",
-aboutTitle:"About Us",aboutSubtitle:"A website that fits your business",aboutText1:"EQUAL WEB designs and builds websites for shops and businesses, focusing on easy use, mobile-friendly layouts and convenient customer contact.",aboutText2:"We support Thai, English and Myanmar, and plan each website around the needs of the business.",
-contactTitle:"Ready to build your website?",contactText:"Tell us about your business and requirements so we can plan a suitable website.",
-faqTitle:"Frequently Asked Questions",faqSubtitle:"Things to know before starting a website",faqQ1:"How long does it take to build a website?",faqA1:"Timing depends on the number of pages, content and requested features. A schedule will be provided after the project details are confirmed.",faqQ2:"Will the website work on mobile phones?",faqA2:"Yes. The layout supports mobile phones, tablets and computers.",faqQ3:"Can visitors change the language?",faqA3:"This website example supports Thai, English and Myanmar.",faqQ4:"Are domain and hosting included in the package price?",faqA4:"Starting prices do not include domain and hosting fees. Any additional costs will be explained before work begins.",footerText:"All rights reserved."
-},
-my:{
-menuHeading:"စတင်ဖန်တီးလိုက်ပါ — သင့် Website",
-menuHome:"ပင်မ",menuServices:"ဝန်ဆောင်မှုများ",menuPricing:"ဈေးနှုန်းများ",menuSamples:"နမူနာဒီဇိုင်း",menuAbout:"လုပ်ငန်းအကြောင်း",menuContact:"ဆက်သွယ်ရန်",menuFaq:"မေးလေ့ရှိသောမေးခွန်း",
-heroTitle:"ကောင်းမွန်သော Website<br>ဖြင့် လုပ်ငန်းကို တိုးတက်စေပါ",heroText:"သင့်လုပ်ငန်းအတွက် Website တစ်ခု ဖန်တီးပါ။ ဖောက်သည်များ ရှာဖွေရလွယ်ကူပြီး ဖုန်းတွင်လည်း အဆင်ပြေစွာ အသုံးပြုနိုင်ပါသည်။",heroButton:"ဝန်ဆောင်မှုများ ကြည့်ရန်",
-servicesTitle:"ကျွန်ုပ်တို့၏ ဝန်ဆောင်မှုများ",servicesSubtitle:"သင့်လုပ်ငန်းအတွက် အွန်လိုင်းဝန်ဆောင်မှုများ",service1Title:"Website ဒီဇိုင်း",service1Text:"ဖုန်းနှင့် ကွန်ပျူတာများတွင် အသုံးပြုနိုင်သော ခေတ်မီလှပသည့် Website များ။",service2Title:"လုပ်ငန်းသုံး Website",service2Text:"ကုန်ပစ္စည်း၊ ဝန်ဆောင်မှု၊ ဆိုင်အချက်အလက်နှင့် ဆက်သွယ်ရန်အချက်အလက်များ ဖော်ပြနိုင်သည်။",service3Title:"လစဉ် Website ထိန်းသိမ်းမှု",service3Text:"ရွေးချယ်ထားသော Package အလိုက် Website ကို ထိန်းသိမ်းပြီး အချက်အလက်များ ပြင်ဆင်ပေးခြင်း။",
-pricingTitle:"ဝန်ဆောင်မှု Package များ",pricingSubtitle:"သင့်လုပ်ငန်းနှင့် သင့်တော်သော Package ကို ရွေးချယ်ပါ",starterDesc:"ဆိုင်ငယ်များနှင့် လုပ်ငန်းငယ်များအတွက်",starter1:"စာမျက်နှာတစ်မျက်နှာ Website",starter2:"ဖုန်းတွင် အသုံးပြုနိုင်ခြင်း",starter3:"လုပ်ငန်းဆက်သွယ်ရန် အချက်အလက်",businessDesc:"အချက်အလက်ပြည့်စုံစွာ ဖော်ပြလိုသော လုပ်ငန်းများအတွက်",business1:"စာမျက်နှာများစွာ ပါဝင်ခြင်း",business2:"ကုန်ပစ္စည်းနှင့် ဝန်ဆောင်မှုများ",business3:"ဖောက်သည်ဆက်သွယ်ရန် နည်းလမ်းများ",premiumDesc:"စိတ်ကြိုက် Website လိုအပ်သော လုပ်ငန်းများအတွက်",premium1:"စိတ်ကြိုက် ဒီဇိုင်း",premium2:"ထပ်ဆောင်းလုပ်ဆောင်ချက်များ",premium3:"Website ထိန်းသိမ်းမှု အစီအစဉ်",priceNote:"ဖော်ပြထားသော ဈေးနှုန်းများသည် စတင်ဈေးနှုန်း ဥပမာများသာ ဖြစ်သည်။ Domain နှင့် Hosting အတွက် အပိုကုန်ကျစရိတ် ရှိနိုင်သည်။",
-samplesTitle:"Website နမူနာများ",samplesSubtitle:"လုပ်ငန်းအမျိုးအစားအလိုက် Website ပုံစံနမူနာများ",sample1Title:"Online Shop",sample1Text:"ကုန်ပစ္စည်း၊ အသေးစိတ်နှင့် မှာယူရန်အချက်အလက်များ ဖော်ပြခြင်း",sample2Title:"လုပ်ငန်းသုံး Website",sample2Text:"လုပ်ငန်း၊ ဝန်ဆောင်မှုနှင့် ဆက်သွယ်ရန်အချက်အလက် မိတ်ဆက်ခြင်း",sample3Title:"ဝန်ဆောင်မှု Website",sample3Text:"ဝန်ဆောင်မှု၊ ဈေးနှုန်းနှင့် ဆက်သွယ်ရန်နည်းလမ်းများ ဖော်ပြခြင်း",sampleNote:"ဤနမူနာများကို လုပ်ငန်းလိုအပ်ချက်အလိုက် ပြင်ဆင်နိုင်သည်။",
-aboutTitle:"လုပ်ငန်းအကြောင်း",aboutSubtitle:"သင့်လုပ်ငန်းနှင့် သင့်တော်သော Website",aboutText1:"EQUAL WEB သည် ဆိုင်များနှင့် လုပ်ငန်းများအတွက် Website ဒီဇိုင်းရေးဆွဲခြင်းနှင့် တည်ဆောက်ခြင်း ဝန်ဆောင်မှုပေးသည်။ အသုံးပြုရလွယ်ကူပြီး ဖုန်းတွင်လည်း ကြည့်ကောင်းစေရန်နှင့် ဖောက်သည်များ ဆက်သွယ်ရလွယ်ကူစေရန် အလေးထားသည်။",aboutText2:"ထိုင်း၊ အင်္ဂလိပ်နှင့် မြန်မာဘာသာများကို ပံ့ပိုးပြီး လုပ်ငန်းတစ်ခုချင်းစီ၏ လိုအပ်ချက်နှင့် ကိုက်ညီအောင် စီစဉ်ပေးသည်။",
-contactTitle:"သင့် Website ကို စတင်ဖန်တီးဖို့ အသင့်ဖြစ်ပြီလား?",contactText:"သင့်လုပ်ငန်းနှင့် လိုအပ်ချက်များကို ဆွေးနွေးပြီး သင့်တော်သော Website အစီအစဉ်ကို ရေးဆွဲနိုင်ပါသည်။",
-faqTitle:"မေးလေ့ရှိသော မေးခွန်းများ",faqSubtitle:"Website မစတင်မီ သိထားသင့်သော အချက်များ",faqQ1:"Website တစ်ခု ပြုလုပ်ရန် အချိန်ဘယ်လောက်ကြာမလဲ?",faqA1:"စာမျက်နှာအရေအတွက်၊ အကြောင်းအရာနှင့် လိုအပ်သောလုပ်ဆောင်ချက်များပေါ် မူတည်သည်။ အသေးစိတ်သတ်မှတ်ပြီးနောက် အချိန်ဇယားကို အသိပေးပါမည်။",faqQ2:"ဖုန်းမှာ အသုံးပြုလို့ရပါသလား?",faqA2:"ဖုန်း၊ Tablet နှင့် ကွန်ပျူတာများတွင် အဆင်ပြေစွာ အသုံးပြုနိုင်သည်။",faqQ3:"ဘာသာစကား ပြောင်းလို့ရပါသလား?",faqA3:"ဤ Website နမူနာတွင် ထိုင်း၊ အင်္ဂလိပ်နှင့် မြန်မာဘာသာများ ပါဝင်သည်။",faqQ4:"Package ဈေးနှုန်းထဲမှာ Domain နဲ့ Hosting ပါဝင်ပါသလား?",faqA4:"စတင်ဈေးနှုန်းတွင် Domain နှင့် Hosting ကုန်ကျစရိတ် မပါဝင်ပါ။ အပိုကုန်ကျစရိတ်ရှိပါက အလုပ်မစမီ အသိပေးပါမည်။",footerText:"မူပိုင်ခွင့်အားလုံး လက်ဝယ်ရှိသည်။"
-}
-};
-const buttons=[...document.querySelectorAll("[data-view]")];
-function showView(name){
-  document.querySelectorAll(".view").forEach(v=>v.classList.toggle("active",v.id==="view-"+name));
-  buttons.forEach(b=>b.classList.toggle("active",b.dataset.view===name));
-  window.scrollTo({top:0,behavior:"smooth"});
-}
-buttons.forEach(b=>b.addEventListener("click",()=>showView(b.dataset.view)));
-document.querySelectorAll("[data-go]").forEach(b=>b.addEventListener("click",()=>showView(b.dataset.go)));
-function changeLanguage(lang){
-  const words=translations[lang]||translations.th;
-  document.documentElement.lang=lang;
-  document.querySelectorAll("[data-i18n]").forEach(el=>{
-    const key=el.dataset.i18n;
-    if(words[key]!==undefined)el.innerHTML=words[key];
-  });
-}
-document.getElementById("language").addEventListener("change",e=>changeLanguage(e.target.value));
-document.getElementById("year").textContent=new Date().getFullYear();
-changeLanguage("th");
+(function () {
+  function applyThaiFlagLetters() {
+    const el = document.querySelector('.service-note .service-note-text');
+    if (!el) {
+      console.error('Thai banner element not found');
+      return;
+    }
+
+    const original = 'รับทำเว็บไซต์สำหรับธุรกิจและร้านค้า';
+    if (!window.Intl || !Intl.Segmenter) {
+      console.error('Intl.Segmenter not supported');
+      return;
+    }
+
+    const segmenter = new Intl.Segmenter('th', { granularity: 'grapheme' });
+    const fragment = document.createDocumentFragment();
+    let count = 0;
+
+    for (const part of segmenter.segment(original)) {
+      const span = document.createElement('span');
+      span.className = 'thai-flag-letter';
+      span.textContent = part.segment;
+
+      span.style.display = 'inline-block';
+      span.style.backgroundImage =
+        'linear-gradient(to bottom, #DA291C 0%, #DA291C 20%, #FFFFFF 20%, #FFFFFF 40%, #241D4F 40%, #241D4F 60%, #FFFFFF 60%, #FFFFFF 80%, #DA291C 80%, #DA291C 100%)';
+      span.style.backgroundSize = '100% 100%';
+      span.style.backgroundRepeat = 'no-repeat';
+      span.style.webkitBackgroundClip = 'text';
+      span.style.backgroundClip = 'text';
+      span.style.color = 'transparent';
+      span.style.webkitTextFillColor = 'transparent';
+
+      fragment.appendChild(span);
+      count++;
+    }
+
+    el.replaceChildren(fragment);
+    console.log('Thai flag letters applied:', count);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', applyThaiFlagLetters);
+  } else {
+    applyThaiFlagLetters();
+  }
+})();
 </script>
+
 </body>
 </html>
