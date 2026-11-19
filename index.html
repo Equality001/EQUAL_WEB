@@ -400,6 +400,47 @@ box-sizing:border-box;
   -webkit-text-fill-color: transparent !important;
   text-shadow: none !important;
 }
+
+/* UNIFORM THAI FLAG STRIPES */
+.service-note,
+.service-note::before,
+.service-note::after {
+  background: #000 !important;
+  background-image: none !important;
+}
+
+.service-note .service-note-text {
+  background: #000 !important;
+  font-family: 'Noto Serif Thai', serif !important;
+  font-size: clamp(17px, 5.2vw, 24px) !important;
+  font-weight: 700 !important;
+  line-height: 1.8 !important;
+  text-align: center !important;
+}
+
+.service-note .thai-flag-letter {
+  display: inline-block !important;
+  height: 1.8em !important;
+  line-height: 1.8em !important;
+  vertical-align: baseline !important;
+  background-image: linear-gradient(
+    to bottom,
+    #DA291C 0%, #DA291C 20%,
+    #FFFFFF 20%, #FFFFFF 40%,
+    #241D4F 40%, #241D4F 60%,
+    #FFFFFF 60%, #FFFFFF 80%,
+    #DA291C 80%, #DA291C 100%
+  ) !important;
+  background-size: 100% 100% !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  color: transparent !important;
+  -webkit-text-fill-color: transparent !important;
+  text-shadow: none !important;
+}
+
 </style>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -539,52 +580,32 @@ box-sizing:border-box;
 
 
 
+
+
+
 <script>
 (function () {
-  function applyThaiFlagLetters() {
+  function renderThaiFlag() {
     const el = document.querySelector('.service-note .service-note-text');
-    if (!el) {
-      console.error('Thai banner element not found');
-      return;
-    }
+    if (!el || !window.Intl || !Intl.Segmenter) return;
 
-    const original = 'รับทำเว็บไซต์สำหรับธุรกิจและร้านค้า';
-    if (!window.Intl || !Intl.Segmenter) {
-      console.error('Intl.Segmenter not supported');
-      return;
-    }
-
-    const segmenter = new Intl.Segmenter('th', { granularity: 'grapheme' });
+    const text = 'รับทำเว็บไซต์สำหรับธุรกิจและร้านค้า';
+    const segmenter = new Intl.Segmenter('th', {granularity: 'grapheme'});
     const fragment = document.createDocumentFragment();
-    let count = 0;
 
-    for (const part of segmenter.segment(original)) {
+    for (const part of segmenter.segment(text)) {
       const span = document.createElement('span');
       span.className = 'thai-flag-letter';
       span.textContent = part.segment;
-
-      span.style.display = 'inline-block';
-      span.style.backgroundImage =
-        'linear-gradient(to bottom, #DA291C 0%, #DA291C 20%, #FFFFFF 20%, #FFFFFF 40%, #241D4F 40%, #241D4F 60%, #FFFFFF 60%, #FFFFFF 80%, #DA291C 80%, #DA291C 100%)';
-      span.style.backgroundSize = '100% 100%';
-      span.style.backgroundRepeat = 'no-repeat';
-      span.style.webkitBackgroundClip = 'text';
-      span.style.backgroundClip = 'text';
-      span.style.color = 'transparent';
-      span.style.webkitTextFillColor = 'transparent';
-
       fragment.appendChild(span);
-      count++;
     }
-
     el.replaceChildren(fragment);
-    console.log('Thai flag letters applied:', count);
   }
 
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', applyThaiFlagLetters);
+    document.addEventListener('DOMContentLoaded', renderThaiFlag);
   } else {
-    applyThaiFlagLetters();
+    renderThaiFlag();
   }
 })();
 </script>
