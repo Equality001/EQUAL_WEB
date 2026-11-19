@@ -3,388 +3,316 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#101827">
-<title>EQUAL WEB | Your Business. Your Website.</title>
+<meta name="theme-color" content="#000000">
+<title>EQUAL WEB | Digital Services</title>
 <meta name="description" content="Professional websites for businesses in Thailand. Thai, English and Myanmar support.">
-
 <style>
-:root {
-  --dark:#101827;
-  --blue:#333333;
-  --light:#eeeeee;
-  --text:#172033;
-  --muted:#667085;
+:root{
+  --black:#000000;
   --white:#ffffff;
+  --blue:#2563eb;
+  --gray:#f3f4f6;
+  --mid:#6b7280;
+  --line:#d1d5db;
 }
-* { box-sizing:border-box; margin:0; padding:0; }
-html { scroll-behavior:smooth; }
-body {
-  font-family:Arial,"Noto Sans Thai","Noto Sans Myanmar",sans-serif;
-  color:var(--text);
-  background:var(--white);
-  line-height:1.7;
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,"Noto Sans Thai","Noto Sans Myanmar",sans-serif;background:var(--white);color:var(--black);line-height:1.65}
+button,a{font:inherit}
+.site-header{background:var(--black);color:var(--white);padding:17px 5% 14px;text-align:center;border-bottom:3px solid var(--blue)}
+.brand{font-size:27px;font-weight:800;letter-spacing:1.5px;line-height:1.2}
+.brand span{color:#9ca3af}
+.tagline{font-size:11px;letter-spacing:2px;color:#d1d5db;margin-top:4px}
+.contact-bar{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;max-width:620px;margin:15px auto 0}
+.contact-link{display:flex;align-items:center;justify-content:center;gap:6px;min-height:40px;padding:7px 4px;border:1px solid #ffffff;border-radius:8px;color:#ffffff;text-decoration:none;font-size:12px;font-weight:700;white-space:nowrap}
+.contact-link:active,.contact-link:hover{background:var(--blue);border-color:var(--blue)}
+.contact-link{flex-direction:column;gap:3px;min-height:65px;font-size:11px;padding:8px 4px}.contact-link svg{width:27px;height:27px;flex:0 0 27px}
+.top-tools{display:flex;justify-content:flex-end;max-width:1100px;margin:12px auto 0}
+select{padding:7px 10px;border-radius:8px;border:1px solid #ffffff;background:#ffffff;color:#000000;font-size:13px}
+.menu-wrap{background:#ffffff;border-bottom:1px solid var(--line);padding:16px 4%;position:sticky;top:0;z-index:20}.menu-title{text-align:center;font-size:20px;font-weight:800;margin:0 auto 13px;color:#000000}.menu-title span{display:inline-block;border-bottom:3px solid var(--blue);padding:0 5px 7px}
+.menu{max-width:1100px;margin:auto;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.menu button{border:1px solid #cbd5e1;background:#ffffff;color:#111827;border-radius:12px;min-height:66px;padding:12px 6px;font-size:13px;font-weight:700;cursor:pointer;box-shadow:0 2px 7px rgba(0,0,0,.05)}
+.menu button.active,.menu button:hover{background:var(--blue);border-color:var(--blue);color:#ffffff}
+main{max-width:1100px;margin:0 auto;min-height:55vh}
+.view{display:none;padding:55px 5% 65px;animation:fade .2s ease}
+.view.active{display:block}
+@keyframes fade{from{opacity:.55;transform:translateY(5px)}to{opacity:1;transform:translateY(0)}}
+.hero{text-align:center;padding:15px 0 12px}
+.hero h1{font-size:clamp(30px,6vw,48px);line-height:1.25;margin-bottom:15px}
+.hero p{max-width:700px;margin:0 auto 24px;color:#4b5563}
+.primary-btn{display:inline-block;background:var(--blue);color:#ffffff;text-decoration:none;padding:12px 22px;border-radius:9px;font-weight:700;border:0;cursor:pointer}
+.section-heading{text-align:center;margin-bottom:30px}
+.section-heading h1,.section-heading h2{font-size:clamp(25px,5vw,34px);margin-bottom:7px}
+.section-heading p{color:var(--mid)}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:17px}
+.card{border:1px solid var(--line);border-radius:13px;padding:23px;background:#ffffff;box-shadow:0 4px 15px rgba(0,0,0,.045)}
+.card h3{font-size:19px;margin:9px 0}
+.card p{font-size:14px;color:#4b5563}
+.card-icon{font-size:29px}
+.price{font-size:29px;color:var(--blue);font-weight:800;margin:10px 0}
+.card ul{list-style:none;margin:14px 0 0;font-size:14px}
+.card li{padding:5px 0;border-bottom:1px solid #f0f0f0}
+.card li:before{content:"✓ ";color:var(--blue);font-weight:800}
+.card.featured{border:2px solid var(--blue)}
+.sample-box{min-height:135px;border-radius:9px;background:linear-gradient(135deg,#111827,#4b5563);color:#ffffff;display:flex;align-items:center;justify-content:center;text-align:center;font-weight:800;font-size:20px;margin-bottom:14px;padding:15px}
+.note{font-size:13px;color:var(--mid);text-align:center;margin-top:22px}
+.about-copy{max-width:780px;margin:auto;font-size:16px;color:#374151}
+.about-copy p{margin-bottom:15px}
+.contact-panel{background:var(--black);color:#ffffff;border-radius:15px;padding:30px;text-align:center}
+.contact-panel p{color:#d1d5db;margin:10px auto 20px;max-width:650px}
+.contact-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;max-width:600px;margin:20px auto 0}
+.contact-grid a{display:block;padding:12px;border:1px solid #ffffff;border-radius:9px;color:#ffffff;text-decoration:none;font-weight:700}
+.contact-grid a:hover{background:var(--blue);border-color:var(--blue)}
+details{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:10px 0}
+summary{cursor:pointer;font-weight:700}
+details p{color:#4b5563;font-size:14px;padding-top:10px}
+footer{background:#000000;color:#d1d5db;text-align:center;padding:22px 12px;font-size:12px}
+@media(max-width:480px){
+ .site-header{padding:14px 12px}
+ .brand{font-size:24px}
+ .contact-bar{gap:5px;margin-top:13px}
+ .contact-link{font-size:10px;gap:3px;min-height:38px;padding:6px 2px}
+ .contact-link{min-height:62px;font-size:10px}.contact-link svg{width:25px;height:25px;flex-basis:25px}
+ .menu{gap:6px}
+ .menu button{font-size:11px;padding:9px 3px}
+ .view{padding:38px 5% 48px}
+ .card{padding:19px}
 }
-header {
-  background:var(--dark);
-  color:white;
-  padding:14px 6%;
+
+/* EQUAL WEB BRAND LOGO */
+.brand{
   display:flex;
-  justify-content:space-between;
   align-items:center;
-  gap:15px;
+  justify-content:center;
+  gap:10px;
+}
+.brand-logo{
+  width:42px;
+  height:42px;
+  object-fit:contain;
+  flex:0 0 42px;
+}
+@media(max-width:480px){
+  .brand-logo{
+    width:36px;
+    height:36px;
+    flex-basis:36px;
+  }
+}
+
+
+/* EQUAL WEB STICKY HEADER */
+.site-header{
   position:sticky;
   top:0;
-  z-index:10;
-}
-.logo { font-size:23px; font-weight:800; letter-spacing:1px; }
-.logo span { color:#cccccc; }
-nav { display:flex; align-items:center; gap:20px; }
-nav a {
-  color:#eeeeee;
-  text-decoration:none;
-  font-size:14px;
-}
-nav a:hover { color:#cccccc; }
-select {
-  padding:8px 10px;
-  border-radius:8px;
-  border:1px solid #ffffff;
-  background:#ffffff;
-  color:#000000;
-}
-.hero {
-  background:linear-gradient(135deg,#000000,#555555);
-  color:white;
-  text-align:center;
-  padding:95px 20px 100px;
-}
-.hero h1 {
-  font-size:clamp(34px,6vw,58px);
-  line-height:1.2;
-  margin-bottom:20px;
-}
-.hero p {
-  max-width:650px;
-  margin:0 auto 28px;
-  color:#dddddd;
-  font-size:17px;
-}
-.btn {
-  display:inline-block;
-  background:var(--blue);
-  color:white;
-  padding:12px 25px;
-  border-radius:8px;
-  text-decoration:none;
-  font-weight:bold;
-}
-.btn:hover { background:#111111; }
-section { padding:70px 6%; }
-.section-title { text-align:center; margin-bottom:38px; }
-.section-title h2 { font-size:30px; margin-bottom:8px; }
-.section-title p { color:var(--muted); }
-.services,.pricing {
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:20px;
-  max-width:1100px;
-  margin:auto;
-}
-.service,.price-card {
-  padding:27px 23px;
-  border:1px solid #cccccc;
-  border-radius:14px;
-  background:white;
-  box-shadow:0 5px 20px rgba(0,0,0,.06);
-}
-.service h3,.price-card h3 { margin:12px 0; }
-.service p,.price-card p { color:var(--muted); font-size:14px; }
-.service-icon { font-size:30px; }
-.pricing-section { background:var(--light); }
-.price {
-  font-size:29px;
-  color:var(--blue);
-  font-weight:800;
-  margin:12px 0;
-}
-.price-card ul {
-  list-style:none;
-  margin:18px 0;
-  font-size:14px;
-}
-.price-card li { padding:5px 0; }
-.price-card li::before { content:"✓ "; color:#555555; font-weight:bold; }
-.featured { border:2px solid #555555; }
-.contact {
-  text-align:center;
-  background:var(--dark);
-  color:white;
-}
-.contact p { color:#dddddd; margin:12px auto 24px; max-width:650px; }
-.contact-note { font-size:13px; color:#aaaaaa; margin-top:18px; }
-footer {
-  background:#080f1d;
-  color:#aaaaaa;
-  text-align:center;
-  padding:22px 12px;
-  font-size:13px;
-}
-@media(max-width:700px) {
-  header { flex-wrap:wrap; }
-  nav { order:3; width:100%; justify-content:center; gap:14px; }
-  nav a { font-size:12px; }
-  .hero { padding:75px 18px; }
-  section { padding:55px 5%; }
+  z-index:1000;
+  background:#000000;
+  box-shadow:0 2px 8px rgba(0,0,0,.18);
 }
 
 
-/* EQUAL WEB - THREE COLOR THEME */
-:root {
-  --dark:#000000;
-  --light:#ffffff;
-  --blue:#2563eb;
-}
-header {
-  background:#000000 !important;
-  color:#ffffff !important;
-  border-bottom:2px solid #2563eb;
-}
-header::after {
-  content:none !important;
-}
-.hero {
-  background:#ffffff !important;
-  color:#000000 !important;
-}
-.hero p {
-  color:#000000 !important;
-}
-button, .btn, .button {
-  background:#2563eb !important;
-  color:#ffffff !important;
-}
-a {
-  color:#2563eb;
-}
+/* COMPACT STICKY HEADER */
+.site-header{position:sticky;top:0;z-index:1000;padding:5px 8px;background:#000}
+.brand{display:flex;align-items:center;justify-content:center;gap:6px;font-size:21px;line-height:1.1}
+.brand-logo{width:28px;height:28px;flex:0 0 28px;object-fit:contain}
+.tagline{font-size:8px;margin-top:2px}
+.contact-bar{grid-template-columns:repeat(4,minmax(0,1fr));gap:4px;margin:6px auto 0}
+.contact-link{flex-direction:row;gap:3px;min-height:27px;height:27px;padding:2px;font-size:8px;border-radius:5px}
+.contact-link svg{width:13px;height:13px;flex:0 0 13px}
 
-/* EQUAL WEB CONTACT LOGOS */
-.equal-contact-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 9px;
-  min-width: 135px;
-  padding: 12px 16px;
-  margin: 5px;
-  background: #ffffff;
-  color: #000000;
-  border: 1px solid #2563eb;
-  border-radius: 10px;
-  text-decoration: none;
-  font-size: 14px;
-  font-weight: 600;
-  box-sizing: border-box;
-}
-.equal-contact-btn svg {
-  width: 28px;
-  height: 28px;
-  flex-shrink: 0;
-}
-.equal-contact-btn:hover {
-  background: #2563eb;
-  color: #ffffff;
+/* EQUAL WEB HEADER LAYOUT */
+.header-main{display:flex;align-items:center;justify-content:center;gap:10px}
+.brand-block{display:flex;flex-direction:column;align-items:center}
+.brand-logo{width:42px;height:42px;object-fit:contain}
+.brand-caption{font-size:9px;font-weight:800;letter-spacing:2px}
+.header-right{flex:1;min-width:0;text-align:left}
+.motto{font-size:clamp(9px,2.8vw,15px);font-weight:800;letter-spacing:.5px;white-space:nowrap}
+.header-subrow{display:flex;align-items:center;justify-content:space-between;gap:5px;margin-top:5px}
+.header-subrow .tagline{font-size:9px;margin:0;white-space:nowrap}
+.header-subrow .top-tools{margin:0}
+.header-subrow select{max-width:110px}
+/* EQUAL WEB THAI SERVICE NOTE */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Thai:wght@400;500;600;700&display=swap');
+.service-note{
+font-family:'Noto Serif Thai',serif;
+font-size:clamp(12px,3vw,15px);
+font-weight:600;
+color:#ffffff;
+text-align:center;
+margin:7px auto 2px;
+line-height:1.7;
 }
 
 </style>
 </head>
-
 <body>
-<header>
-  <div class="logo">EQUAL<span>WEB</span></div>
+<header class="site-header"><div class="header-main">
+<div class="brand-block">
 
-  <nav>
-    <a href="#home" data-i18n="navHome">หน้าแรก</a>
-    <a href="#services" data-i18n="navServices">บริการ</a>
-    <a href="#pricing" data-i18n="navPricing">ราคา</a>
-    <a href="#contact" data-i18n="navContact">ติดต่อ</a>
+<div class="brand-caption">EQUALITY</div>
+</div>
+<div class="header-right">
+<div class="motto">JUSTICE SUSTAINS PEACE</div>
+<div class="header-subrow"><div class="tagline">DIGITAL SERVICES</div><div class="top-tools">
+    <select id="language" aria-label="Select language">
+      <option value="th">🇹🇭 ไทย</option>
+      <option value="en">🇬🇧 English</option>
+      <option value="my">🇲🇲 မြန်မာ</option>
+    </select>
+  </div></div>
+</div></div><div class="contact-bar" aria-label="Contact links">
+    <a class="contact-link" href="https://www.facebook.com/share/18eXLfczGy/" target="_blank" rel="noopener" aria-label="Facebook">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#1877F2"/><path fill="#fff" d="M13.5 21v-8h2.7l.4-3h-3.1V8.1c0-.9.3-1.5 1.6-1.5h1.7V4c-.3 0-1.4-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3V10H7.3v3h2.8v8z"/></svg>
+      Facebook
+    </a>
+    <a class="contact-link" href="https://line.me/ti/p/~equality1990" target="_blank" rel="noopener" aria-label="LINE">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#06C755" d="M12 2C6.5 2 2 5.7 2 10.2c0 4 3.5 7.4 8.2 8 .4.1.8.3.9.6.1.3.1.7 0 1l-.1.8c-.1.4-.2 1 .9.6 1.1-.5 5.7-3.4 7.8-5.8 1.4-1.5 2.3-3.3 2.3-5.2C22 5.7 17.5 2 12 2z"/><text x="12" y="13.5" text-anchor="middle" font-size="6" font-weight="bold" fill="#fff">LINE</text></svg>
+      LINE
+    </a>
+    <a class="contact-link" href="https://t.me/Equality1990" target="_blank" rel="noopener" aria-label="Telegram">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#229ED9"/><path fill="#fff" d="m5 11.5 13-5c.7-.3 1.1.2.9.9l-2.3 10.3c-.2.7-.6.9-1.2.5l-3.5-2.6-1.8 1.7c-.2.2-.4.3-.8.3l.3-3.6 6.6-6c.3-.3 0-.4-.4-.2l-8.2 5.2-3.5-1.1c-.7-.2-.7-.7.9-1.3z"/></svg>
+      Telegram
+    </a>
+    <a class="contact-link" href="tel:+66953106801" aria-label="Phone">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#ffffff"/><path fill="#000000" d="M7 3.8 10 7l-1.7 2c1.1 2.3 2.2 3.4 4.5 4.5l2-1.7 3.2 3-1.8 2.7c-.5.8-1.6.9-2.5.5-4.4-2-7.4-5-9.4-9.4-.4-.9-.3-2 .5-2.5z"/></svg>
+      Phone
+    </a>
+  </div>
+<div class="service-note" lang="th">รับทำเว็บไซต์สำหรับธุรกิจและร้านค้า</div></header>
+
+<div class="menu-wrap">
+  <div class="menu-title"><span data-i18n="menuHeading">เริ่มสร้างเว็บไซต์ของคุณ</span></div>
+  <nav class="menu" aria-label="Main menu">
+    <button class="active" data-view="home" data-i18n="menuHome">หน้าแรก</button>
+    <button data-view="services" data-i18n="menuServices">ဝန်ဆောင်မှုများ</button>
+    <button data-view="pricing" data-i18n="menuPricing">ဈေးနှုန်းများ</button>
+    <button data-view="samples" data-i18n="menuSamples">နမူနာဒီဇိုင်းများ</button>
+    <button data-view="about" data-i18n="menuAbout">လုပ်ငန်းအကြောင်း</button>
+    <button data-view="contact" data-i18n="menuContact">ဆက်သွယ်ရန်</button>
+    <button data-view="faq" data-i18n="menuFaq">မေးလေ့ရှိသောမေးခွန်း</button>
   </nav>
-
-  <select id="language" aria-label="Select language">
-    <option value="th" selected>🇹🇭 ไทย</option>
-    <option value="en">🇬🇧 English</option>
-    <option value="my">🇲🇲 မြန်မာ</option>
-  </select>
-</header>
+</div>
 
 <main>
-<section class="hero" id="home">
-  <h1 data-i18n="heroTitle">เว็บไซต์ที่ดี<br>เริ่มต้นธุรกิจที่ดีกว่า</h1>
-  <p data-i18n="heroText">สร้างเว็บไซต์สำหรับธุรกิจของคุณ ให้ลูกค้าค้นหาคุณได้ง่ายขึ้น พร้อมดีไซน์ที่สวยงามและใช้งานได้บนมือถือ</p>
-  <a href="#contact" class="btn" data-i18n="heroButton">เริ่มต้นสร้างเว็บไซต์</a>
-</section>
-
-<section id="services">
-  <div class="section-title">
-    <h2 data-i18n="servicesTitle">บริการของเรา</h2>
-    <p data-i18n="servicesSubtitle">เครื่องมือออนไลน์สำหรับธุรกิจของคุณ</p>
-  </div>
-
-  <div class="services">
-    <article class="service">
-      <div class="service-icon">🌐</div>
-      <h3 data-i18n="service1Title">ออกแบบเว็บไซต์</h3>
-      <p data-i18n="service1Text">เว็บไซต์สวยงาม ทันสมัย รองรับโทรศัพท์มือถือและคอมพิวเตอร์</p>
-    </article>
-
-    <article class="service">
-      <div class="service-icon">🏪</div>
-      <h3 data-i18n="service2Title">เว็บไซต์ธุรกิจ</h3>
-      <p data-i18n="service2Text">แสดงสินค้า บริการ ข้อมูลร้านค้า และช่องทางติดต่อลูกค้า</p>
-    </article>
-
-    <article class="service">
-      <div class="service-icon">🛠️</div>
-      <h3 data-i18n="service3Title">ดูแลเว็บไซต์รายเดือน</h3>
-      <p data-i18n="service3Text">ช่วยดูแลและอัปเดตเนื้อหาเว็บไซต์ตามแพ็กเกจที่เลือก</p>
-    </article>
+<section class="view active" id="view-home">
+  <div class="hero">
+    <h1 data-i18n="heroTitle">เว็บไซต์ที่ดี<br>เริ่มต้นธุรกิจที่ดีกว่า</h1>
+    <p data-i18n="heroText">สร้างเว็บไซต์สำหรับธุรกิจของคุณ ให้ลูกค้าค้นหาคุณได้ง่ายขึ้น พร้อมดีไซน์ที่สวยงามและใช้งานได้บนมือถือ</p>
+    <button class="primary-btn" data-go="services" data-i18n="heroButton">ดูบริการของเรา</button>
   </div>
 </section>
 
-<section class="pricing-section" id="pricing">
-  <div class="section-title">
-    <h2 data-i18n="pricingTitle">แพ็กเกจราคา</h2>
-    <p data-i18n="pricingSubtitle">เลือกแพ็กเกจที่เหมาะกับธุรกิจของคุณ</p>
+<section class="view" id="view-services">
+  <div class="section-heading"><h1 data-i18n="servicesTitle">บริการของเรา</h1><p data-i18n="servicesSubtitle">เครื่องมือออนไลน์สำหรับธุรกิจของคุณ</p></div>
+  <div class="cards">
+    <article class="card"><div class="card-icon">🌐</div><h3 data-i18n="service1Title">ออกแบบเว็บไซต์</h3><p data-i18n="service1Text">เว็บไซต์สวยงาม ทันสมัย รองรับโทรศัพท์มือถือและคอมพิวเตอร์</p></article>
+    <article class="card"><div class="card-icon">🏪</div><h3 data-i18n="service2Title">เว็บไซต์ธุรกิจ</h3><p data-i18n="service2Text">แสดงสินค้า บริการ ข้อมูลร้านค้า และช่องทางติดต่อลูกค้า</p></article>
+    <article class="card"><div class="card-icon">🛠️</div><h3 data-i18n="service3Title">ดูแลเว็บไซต์รายเดือน</h3><p data-i18n="service3Text">ช่วยดูแลและอัปเดตเนื้อหาเว็บไซต์ตามแพ็กเกจที่เลือก</p></article>
   </div>
-
-  <div class="pricing">
-    <article class="price-card">
-      <h3>Starter</h3>
-      <div class="price">฿1,500+</div>
-      <p data-i18n="starterDesc">เหมาะสำหรับร้านค้าขนาดเล็ก</p>
-      <ul>
-        <li data-i18n="starter1">เว็บไซต์หน้าเดียว</li>
-        <li data-i18n="starter2">รองรับมือถือ</li>
-        <li data-i18n="starter3">ข้อมูลติดต่อร้านค้า</li>
-      </ul>
-    </article>
-
-    <article class="price-card featured">
-      <h3>Business</h3>
-      <div class="price">฿3,000+</div>
-      <p data-i18n="businessDesc">เหมาะสำหรับธุรกิจที่ต้องการข้อมูลครบถ้วน</p>
-      <ul>
-        <li data-i18n="business1">หลายหน้าเว็บไซต์</li>
-        <li data-i18n="business2">บริการและสินค้า</li>
-        <li data-i18n="business3">ช่องทางติดต่อลูกค้า</li>
-      </ul>
-    </article>
-
-    <article class="price-card">
-      <h3>Premium</h3>
-      <div class="price">฿6,000+</div>
-      <p data-i18n="premiumDesc">เหมาะสำหรับธุรกิจที่ต้องการเว็บไซต์เพิ่มเติม</p>
-      <ul>
-        <li data-i18n="premium1">ออกแบบตามความต้องการ</li>
-        <li data-i18n="premium2">ฟังก์ชันเพิ่มเติม</li>
-        <li data-i18n="premium3">วางแผนการดูแลเว็บไซต์</li>
-      </ul>
-    </article>
-  </div>
-  <p style="text-align:center;color:#777777;font-size:13px;margin-top:25px" data-i18n="priceNote">ราคาเริ่มต้นเป็นตัวอย่าง ราคาจริงขึ้นอยู่กับรายละเอียดงาน โดเมนและโฮสติ้งอาจมีค่าใช้จ่ายเพิ่มเติม</p>
 </section>
 
-<section class="contact" id="contact">
-  <h2 data-i18n="contactTitle">พร้อมเริ่มต้นเว็บไซต์ของคุณหรือยัง?</h2>
-  <p data-i18n="contactText">พูดคุยเกี่ยวกับธุรกิจและความต้องการของคุณ เพื่อวางแผนเว็บไซต์ที่เหมาะสม</p>
-  <a class="equal-contact-btn" href="https://line.me/ti/p/~equality1990" aria-label="LINE" target="_blank" rel="noopener"><svg viewBox="0 0 48 48" aria-label="LINE"><path fill="#06C755" d="M24 4C12.95 4 4 11.55 4 20.85c0 8.25 7.1 15.2 16.7 16.55.65.15 1.55.45 1.8 1.05.2.5.15 1.3.05 1.8l-.3 1.7c-.1.5-.4 2 1.75 1.1 2.15-.9 11.6-6.85 15.8-11.7C42.65 27.9 44 24.5 44 20.85 44 11.55 35.05 4 24 4z"/><text x="24" y="26" text-anchor="middle" font-size="13" font-weight="bold" fill="white">LINE</text></svg><span>LINE</span></a>
+<section class="view" id="view-pricing">
+  <div class="section-heading"><h1 data-i18n="pricingTitle">แพ็กเกจราคา</h1><p data-i18n="pricingSubtitle">เลือกแพ็กเกจที่เหมาะกับธุรกิจของคุณ</p></div>
+  <div class="cards">
+    <article class="card"><h3>Starter</h3><div class="price">฿1,500+</div><p data-i18n="starterDesc">เหมาะสำหรับร้านค้าขนาดเล็ก</p><ul><li data-i18n="starter1">เว็บไซต์หน้าเดียว</li><li data-i18n="starter2">รองรับมือถือ</li><li data-i18n="starter3">ข้อมูลติดต่อร้านค้า</li></ul></article>
+    <article class="card featured"><h3>Business</h3><div class="price">฿3,000+</div><p data-i18n="businessDesc">เหมาะสำหรับธุรกิจที่ต้องการข้อมูลครบถ้วน</p><ul><li data-i18n="business1">หลายหน้าเว็บไซต์</li><li data-i18n="business2">บริการและสินค้า</li><li data-i18n="business3">ช่องทางติดต่อลูกค้า</li></ul></article>
+    <article class="card"><h3>Premium</h3><div class="price">฿6,000+</div><p data-i18n="premiumDesc">เหมาะสำหรับธุรกิจที่ต้องการเว็บไซต์เพิ่มเติม</p><ul><li data-i18n="premium1">ออกแบบตามความต้องการ</li><li data-i18n="premium2">ฟังก์ชันเพิ่มเติม</li><li data-i18n="premium3">วางแผนการดูแลเว็บไซต์</li></ul></article>
+  </div>
+  <p class="note" data-i18n="priceNote">ราคาเริ่มต้นเป็นตัวอย่าง ราคาจริงขึ้นอยู่กับรายละเอียดงาน โดเมนและโฮสติ้งอาจมีค่าใช้จ่ายเพิ่มเติม</p>
+</section>
 
-<a class="equal-contact-btn" href="https://www.facebook.com/share/18eXLfczGy/" aria-label="Facebook" target="_blank" rel="noopener"><svg viewBox="0 0 48 48" aria-label="Facebook"><circle cx="24" cy="24" r="22" fill="#1877F2"/><path fill="white" d="M27 42V26h5.4l.8-6.2H27v-4c0-1.8.6-3 3.1-3H33V7.3c-1.1-.15-2.8-.3-4.8-.3-4.8 0-8.1 2.9-8.1 8.3v4.5h-5.4V26h5.4v16z"/></svg><span>Facebook</span></a>
-<a class="equal-contact-btn" href="tel:+66953106801" aria-label="095 310 6801"><svg viewBox="0 0 48 48" aria-label="Phone"><circle cx="24" cy="24" r="22" fill="#000"/><path fill="white" d="M15 8l7 7-4 5c2.5 5 5 7.5 10 10l5-4 7 7-4 6c-1 2-4 2-6 1C18 35 10 27 6 15c-1-2 0-5 2-6z"/></svg><span>095 310 6801</span></a>
-<a class="equal-contact-btn" href="https://t.me/Equality1990" aria-label="Telegram" target="_blank" rel="noopener"><svg viewBox="0 0 48 48" aria-label="Telegram"><circle cx="24" cy="24" r="22" fill="#229ED9"/><path fill="white" d="M10 23l26-10c1.5-.5 2.5.4 2 2l-4.5 21c-.3 1.5-1.2 1.8-2.4 1.1l-7-5.2-3.5 3.4c-.4.4-.8.8-1.6.8l.5-7.2L33 16.5c.6-.5-.1-.8-.8-.3L15 26.8l-7-2.2c-1.5-.5-1.5-1.5 2-2.6z"/></svg><span>Telegram</span></a>
+<section class="view" id="view-samples">
+  <div class="section-heading"><h1 data-i18n="samplesTitle">နမူနာဒီဇိုင်းများ</h1><p data-i18n="samplesSubtitle">ตัวอย่างรูปแบบเว็บไซต์สำหรับธุรกิจ</p></div>
+  <div class="cards">
+    <article class="card"><div class="sample-box">SHOP WEBSITE</div><h3 data-i18n="sample1Title">ร้านค้าออนไลน์</h3><p data-i18n="sample1Text">แสดงสินค้า รายละเอียด และช่องทางสั่งซื้อ</p></article>
+    <article class="card"><div class="sample-box">BUSINESS</div><h3 data-i18n="sample2Title">เว็บไซต์ธุรกิจ</h3><p data-i18n="sample2Text">แนะนำธุรกิจ บริการ และข้อมูลติดต่อ</p></article>
+    <article class="card"><div class="sample-box">SERVICE</div><h3 data-i18n="sample3Title">เว็บไซต์บริการ</h3><p data-i18n="sample3Text">นำเสนอบริการ ราคา และช่องทางติดต่อ</p></article>
+  </div>
+  <p class="note" data-i18n="sampleNote">ตัวอย่างเหล่านี้เป็นแนวทางเบื้องต้น สามารถปรับรูปแบบตามธุรกิจได้</p>
+</section>
 
+<section class="view" id="view-about">
+  <div class="section-heading"><h1 data-i18n="aboutTitle">เกี่ยวกับเรา</h1><p data-i18n="aboutSubtitle">เว็บไซต์ที่เหมาะกับธุรกิจของคุณ</p></div>
+  <div class="about-copy"><p data-i18n="aboutText1">EQUAL WEB ให้บริการออกแบบและจัดทำเว็บไซต์สำหรับร้านค้าและธุรกิจ โดยเน้นการใช้งานง่าย ดูดีบนโทรศัพท์มือถือ และช่วยให้ลูกค้าติดต่อธุรกิจได้สะดวก</p><p data-i18n="aboutText2">รองรับภาษาไทย ภาษาอังกฤษ และภาษาพม่า พร้อมวางแผนรูปแบบเว็บไซต์ให้เหมาะสมกับความต้องการของแต่ละธุรกิจ</p></div>
+</section>
 
+<section class="view" id="view-contact">
+  <div class="contact-panel">
+    <h1 data-i18n="contactTitle">พร้อมเริ่มต้นเว็บไซต์ของคุณหรือยัง?</h1>
+    <p data-i18n="contactText">พูดคุยเกี่ยวกับธุรกิจและความต้องการของคุณ เพื่อวางแผนเว็บไซต์ที่เหมาะสม</p>
+    <div class="contact-grid">
+      <a href="https://line.me/ti/p/~equality1990" target="_blank" rel="noopener">LINE</a>
+      <a href="https://www.facebook.com/share/18eXLfczGy/" target="_blank" rel="noopener">Facebook</a>
+      <a href="https://t.me/Equality1990" target="_blank" rel="noopener">Telegram</a>
+      <a href="tel:+66953106801">095 310 6801</a>
+    </div>
+  </div>
+</section>
+
+<section class="view" id="view-faq">
+  <div class="section-heading"><h1 data-i18n="faqTitle">คำถามที่พบบ่อย</h1><p data-i18n="faqSubtitle">ข้อมูลเบื้องต้นก่อนเริ่มทำเว็บไซต์</p></div>
+  <details><summary data-i18n="faqQ1">ใช้เวลาทำเว็บไซต์นานเท่าไร?</summary><p data-i18n="faqA1">ระยะเวลาขึ้นอยู่กับจำนวนหน้า เนื้อหา และฟังก์ชันที่ต้องการ โดยจะแจ้งกำหนดการหลังสรุปรายละเอียดงาน</p></details>
+  <details><summary data-i18n="faqQ2">เว็บไซต์รองรับโทรศัพท์มือถือหรือไม่?</summary><p data-i18n="faqA2">รองรับการแสดงผลบนโทรศัพท์มือถือ แท็บเล็ต และคอมพิวเตอร์</p></details>
+  <details><summary data-i18n="faqQ3">สามารถเปลี่ยนภาษาได้หรือไม่?</summary><p data-i18n="faqA3">เว็บไซต์ตัวอย่างนี้รองรับภาษาไทย อังกฤษ และမြန်မာ</p></details>
+  <details><summary data-i18n="faqQ4">ราคาในแพ็กเกจรวมโดเมนและโฮสติ้งหรือไม่?</summary><p data-i18n="faqA4">ราคาเริ่มต้นยังไม่รวมค่าโดเมนและโฮสติ้ง หากมีค่าใช้จ่ายเพิ่มเติมจะแจ้งให้ทราบก่อนเริ่มงาน</p></details>
 </section>
 </main>
 
-<footer>
-  <p>© <span id="year"></span> EQUAL WEB. <span data-i18n="footerText">สงวนลิขสิทธิ์</span></p>
-  <p data-i18n="tagline">Your Business. Your Website.</p>
-</footer>
+<footer>© <span id="year"></span> EQUAL WEB. <span data-i18n="footerText">สงวนลิขสิทธิ์</span><br>Your Business. Your Website.</footer>
 
 <script>
-const translations = {
-th: {
-navHome:"หน้าแรก", navServices:"บริการ", navPricing:"ราคา", navContact:"ติดต่อ",
-heroTitle:"เว็บไซต์ที่ดี<br>เริ่มต้นธุรกิจที่ดีกว่า",
-heroText:"สร้างเว็บไซต์สำหรับธุรกิจของคุณ ให้ลูกค้าค้นหาคุณได้ง่ายขึ้น พร้อมดีไซน์ที่สวยงามและใช้งานได้บนมือถือ",
-heroButton:"เริ่มต้นสร้างเว็บไซต์",
-servicesTitle:"บริการของเรา", servicesSubtitle:"เครื่องมือออนไลน์สำหรับธุรกิจของคุณ",
-service1Title:"ออกแบบเว็บไซต์", service1Text:"เว็บไซต์สวยงาม ทันสมัย รองรับโทรศัพท์มือถือและคอมพิวเตอร์",
-service2Title:"เว็บไซต์ธุรกิจ", service2Text:"แสดงสินค้า บริการ ข้อมูลร้านค้า และช่องทางติดต่อลูกค้า",
-service3Title:"ดูแลเว็บไซต์รายเดือน", service3Text:"ช่วยดูแลและอัปเดตเนื้อหาเว็บไซต์ตามแพ็กเกจที่เลือก",
-pricingTitle:"แพ็กเกจราคา", pricingSubtitle:"เลือกแพ็กเกจที่เหมาะกับธุรกิจของคุณ",
-starterDesc:"เหมาะสำหรับร้านค้าขนาดเล็ก", starter1:"เว็บไซต์หน้าเดียว", starter2:"รองรับมือถือ", starter3:"ข้อมูลติดต่อร้านค้า",
-businessDesc:"เหมาะสำหรับธุรกิจที่ต้องการข้อมูลครบถ้วน", business1:"หลายหน้าเว็บไซต์", business2:"บริการและสินค้า", business3:"ช่องทางติดต่อลูกค้า",
-premiumDesc:"เหมาะสำหรับธุรกิจที่ต้องการเว็บไซต์เพิ่มเติม", premium1:"ออกแบบตามความต้องการ", premium2:"ฟังก์ชันเพิ่มเติม", premium3:"วางแผนการดูแลเว็บไซต์",
-priceNote:"ราคาเริ่มต้นเป็นตัวอย่าง ราคาจริงขึ้นอยู่กับรายละเอียดงาน โดเมนและโฮสติ้งอาจมีค่าใช้จ่ายเพิ่มเติม",
-contactTitle:"พร้อมเริ่มต้นเว็บไซต์ของคุณหรือยัง?", contactText:"พูดคุยเกี่ยวกับธุรกิจและความต้องการของคุณ เพื่อวางแผนเว็บไซต์ที่เหมาะสม",
-contactButton:"ติดต่อเรา", contactNote:"ช่องทางติดต่อจะเพิ่มในขั้นตอนถัดไป",
-footerText:"สงวนลิขสิทธิ์", tagline:"Your Business. Your Website."
+const translations={
+th:{
+menuHeading:"เริ่มสร้างเว็บไซต์ของคุณ",
+menuHome:"หน้าแรก",menuServices:"บริการ",menuPricing:"ราคา",menuSamples:"ตัวอย่าง",menuAbout:"เกี่ยวกับเรา",menuContact:"ติดต่อ",menuFaq:"คำถามที่พบบ่อย",
+heroTitle:"เว็บไซต์ที่ดี<br>เริ่มต้นธุรกิจที่ดีกว่า",heroText:"สร้างเว็บไซต์สำหรับธุรกิจของคุณ ให้ลูกค้าค้นหาคุณได้ง่ายขึ้น พร้อมดีไซน์ที่สวยงามและใช้งานได้บนมือถือ",heroButton:"ดูบริการของเรา",
+servicesTitle:"บริการของเรา",servicesSubtitle:"เครื่องมือออนไลน์สำหรับธุรกิจของคุณ",service1Title:"ออกแบบเว็บไซต์",service1Text:"เว็บไซต์สวยงาม ทันสมัย รองรับโทรศัพท์มือถือและคอมพิวเตอร์",service2Title:"เว็บไซต์ธุรกิจ",service2Text:"แสดงสินค้า บริการ ข้อมูลร้านค้า และช่องทางติดต่อลูกค้า",service3Title:"ดูแลเว็บไซต์รายเดือน",service3Text:"ช่วยดูแลและอัปเดตเนื้อหาเว็บไซต์ตามแพ็กเกจที่เลือก",
+pricingTitle:"แพ็กเกจราคา",pricingSubtitle:"เลือกแพ็กเกจที่เหมาะกับธุรกิจของคุณ",starterDesc:"เหมาะสำหรับร้านค้าขนาดเล็ก",starter1:"เว็บไซต์หน้าเดียว",starter2:"รองรับมือถือ",starter3:"ข้อมูลติดต่อร้านค้า",businessDesc:"เหมาะสำหรับธุรกิจที่ต้องการข้อมูลครบถ้วน",business1:"หลายหน้าเว็บไซต์",business2:"บริการและสินค้า",business3:"ช่องทางติดต่อลูกค้า",premiumDesc:"เหมาะสำหรับธุรกิจที่ต้องการเว็บไซต์เพิ่มเติม",premium1:"ออกแบบตามความต้องการ",premium2:"ฟังก์ชันเพิ่มเติม",premium3:"วางแผนการดูแลเว็บไซต์",priceNote:"ราคาเริ่มต้นเป็นตัวอย่าง ราคาจริงขึ้นอยู่กับรายละเอียดงาน โดเมนและโฮสติ้งอาจมีค่าใช้จ่ายเพิ่มเติม",
+samplesTitle:"ตัวอย่างเว็บไซต์",samplesSubtitle:"ตัวอย่างรูปแบบเว็บไซต์สำหรับธุรกิจ",sample1Title:"ร้านค้าออนไลน์",sample1Text:"แสดงสินค้า รายละเอียด และช่องทางสั่งซื้อ",sample2Title:"เว็บไซต์ธุรกิจ",sample2Text:"แนะนำธุรกิจ บริการ และข้อมูลติดต่อ",sample3Title:"เว็บไซต์บริการ",sample3Text:"นำเสนอบริการ ราคา และช่องทางติดต่อ",sampleNote:"ตัวอย่างเหล่านี้เป็นแนวทางเบื้องต้น สามารถปรับรูปแบบตามธุรกิจได้",
+aboutTitle:"เกี่ยวกับเรา",aboutSubtitle:"เว็บไซต์ที่เหมาะกับธุรกิจของคุณ",aboutText1:"EQUAL WEB ให้บริการออกแบบและจัดทำเว็บไซต์สำหรับร้านค้าและธุรกิจ โดยเน้นการใช้งานง่าย ดูดีบนโทรศัพท์มือถือ และช่วยให้ลูกค้าติดต่อธุรกิจได้สะดวก",aboutText2:"รองรับภาษาไทย ภาษาอังกฤษ และภาษาพม่า พร้อมวางแผนรูปแบบเว็บไซต์ให้เหมาะสมกับความต้องการของแต่ละธุรกิจ",
+contactTitle:"พร้อมเริ่มต้นเว็บไซต์ของคุณหรือยัง?",contactText:"พูดคุยเกี่ยวกับธุรกิจและความต้องการของคุณ เพื่อวางแผนเว็บไซต์ที่เหมาะสม",
+faqTitle:"คำถามที่พบบ่อย",faqSubtitle:"ข้อมูลเบื้องต้นก่อนเริ่มทำเว็บไซต์",faqQ1:"ใช้เวลาทำเว็บไซต์นานเท่าไร?",faqA1:"ระยะเวลาขึ้นอยู่กับจำนวนหน้า เนื้อหา และฟังก์ชันที่ต้องการ โดยจะแจ้งกำหนดการหลังสรุปรายละเอียดงาน",faqQ2:"เว็บไซต์รองรับโทรศัพท์มือถือหรือไม่?",faqA2:"รองรับการแสดงผลบนโทรศัพท์มือถือ แท็บเล็ต และคอมพิวเตอร์",faqQ3:"สามารถเปลี่ยนภาษาได้หรือไม่?",faqA3:"เว็บไซต์ตัวอย่างนี้รองรับภาษาไทย อังกฤษ และမြန်မာ",faqQ4:"ราคาในแพ็กเกจรวมโดเมนและโฮสติ้งหรือไม่?",faqA4:"ราคาเริ่มต้นยังไม่รวมค่าโดเมนและโฮสติ้ง หากมีค่าใช้จ่ายเพิ่มเติมจะแจ้งให้ทราบก่อนเริ่มงาน",footerText:"สงวนลิขสิทธิ์"
 },
-en: {
-navHome:"Home", navServices:"Services", navPricing:"Pricing", navContact:"Contact",
-heroTitle:"A Better Website<br>For A Better Business",
-heroText:"Build a website for your business. Help customers find you more easily with a modern, mobile-friendly design.",
-heroButton:"Build Your Website",
-servicesTitle:"Our Services", servicesSubtitle:"Online solutions for your business",
-service1Title:"Website Design", service1Text:"Modern, attractive websites for mobile phones and computers.",
-service2Title:"Business Website", service2Text:"Showcase your products, services, shop information and contact details.",
-service3Title:"Monthly Maintenance", service3Text:"Website care and content updates based on your selected plan.",
-pricingTitle:"Our Packages", pricingSubtitle:"Choose a package that fits your business",
-starterDesc:"For small shops and businesses", starter1:"One-page website", starter2:"Mobile-friendly design", starter3:"Business contact information",
-businessDesc:"For businesses needing more information", business1:"Multi-page website", business2:"Products and services", business3:"Customer contact options",
-premiumDesc:"For businesses needing a more customized website", premium1:"Custom design", premium2:"Additional features", premium3:"Website maintenance planning",
-priceNote:"Starting prices are examples. Final prices depend on project requirements. Domain and hosting may cost extra.",
-contactTitle:"Ready to build your website?", contactText:"Tell us about your business and requirements so we can plan a suitable website.",
-contactButton:"Contact Us", contactNote:"Contact details will be added in the next stage.",
-footerText:"All rights reserved.", tagline:"Your Business. Your Website."
+en:{
+menuHeading:"Start Building Your Website",
+menuHome:"Home",menuServices:"Services",menuPricing:"Pricing",menuSamples:"Samples",menuAbout:"About",menuContact:"Contact",menuFaq:"FAQ",
+heroTitle:"A Better Website<br>For A Better Business",heroText:"Build a website for your business. Help customers find you more easily with a modern, mobile-friendly design.",heroButton:"Explore Services",
+servicesTitle:"Our Services",servicesSubtitle:"Online solutions for your business",service1Title:"Website Design",service1Text:"Modern, attractive websites for mobile phones and computers.",service2Title:"Business Website",service2Text:"Showcase products, services, shop information and customer contact options.",service3Title:"Monthly Maintenance",service3Text:"Website care and content updates based on your selected plan.",
+pricingTitle:"Our Packages",pricingSubtitle:"Choose a package that fits your business",starterDesc:"For small shops and businesses",starter1:"One-page website",starter2:"Mobile-friendly design",starter3:"Business contact information",businessDesc:"For businesses needing more information",business1:"Multi-page website",business2:"Products and services",business3:"Customer contact options",premiumDesc:"For businesses needing a customized website",premium1:"Custom design",premium2:"Additional features",premium3:"Website maintenance planning",priceNote:"Starting prices are examples. Final prices depend on project requirements. Domain and hosting may cost extra.",
+samplesTitle:"Website Samples",samplesSubtitle:"Example website styles for businesses",sample1Title:"Online Shop",sample1Text:"Display products, details and ordering information",sample2Title:"Business Website",sample2Text:"Introduce your business, services and contact details",sample3Title:"Service Website",sample3Text:"Present services, prices and contact options",sampleNote:"These are sample concepts and can be adapted to your business.",
+aboutTitle:"About Us",aboutSubtitle:"A website that fits your business",aboutText1:"EQUAL WEB designs and builds websites for shops and businesses, focusing on easy use, mobile-friendly layouts and convenient customer contact.",aboutText2:"We support Thai, English and Myanmar, and plan each website around the needs of the business.",
+contactTitle:"Ready to build your website?",contactText:"Tell us about your business and requirements so we can plan a suitable website.",
+faqTitle:"Frequently Asked Questions",faqSubtitle:"Things to know before starting a website",faqQ1:"How long does it take to build a website?",faqA1:"Timing depends on the number of pages, content and requested features. A schedule will be provided after the project details are confirmed.",faqQ2:"Will the website work on mobile phones?",faqA2:"Yes. The layout supports mobile phones, tablets and computers.",faqQ3:"Can visitors change the language?",faqA3:"This website example supports Thai, English and Myanmar.",faqQ4:"Are domain and hosting included in the package price?",faqA4:"Starting prices do not include domain and hosting fees. Any additional costs will be explained before work begins.",footerText:"All rights reserved."
 },
-my: {
-navHome:"ပင်မစာမျက်နှာ", navServices:"ဝန်ဆောင်မှုများ", navPricing:"ဈေးနှုန်းများ", navContact:"ဆက်သွယ်ရန်",
-heroTitle:"ကောင်းမွန်သော Website<br>ဖြင့် စီးပွားရေးကို တိုးတက်စေပါ",
-heroText:"သင့်လုပ်ငန်းအတွက် Website တစ်ခု ဖန်တီးပါ။ ဖုန်းနှင့် ကွန်ပျူတာများတွင် အဆင်ပြေစွာ အသုံးပြုနိုင်ပြီး ဖောက်သည်များ ရှာဖွေရလွယ်ကူစေပါသည်။",
-heroButton:"Website စတင်ဖန်တီးမည်",
-servicesTitle:"ကျွန်ုပ်တို့၏ ဝန်ဆောင်မှုများ", servicesSubtitle:"သင့်လုပ်ငန်းအတွက် အွန်လိုင်းဝန်ဆောင်မှုများ",
-service1Title:"Website ဒီဇိုင်း", service1Text:"ဖုန်းနှင့် ကွန်ပျူတာများတွင် အသုံးပြုနိုင်သော ခေတ်မီလှပသည့် Website များ။",
-service2Title:"လုပ်ငန်းသုံး Website", service2Text:"ကုန်ပစ္စည်း၊ ဝန်ဆောင်မှု၊ ဆိုင်အချက်အလက်နှင့် ဆက်သွယ်ရန်အချက်အလက်များ ဖော်ပြနိုင်သည်။",
-service3Title:"လစဉ် Website ထိန်းသိမ်းမှု", service3Text:"ရွေးချယ်ထားသော Package အလိုက် Website ကို ထိန်းသိမ်းပြီး အချက်အလက်များ ပြင်ဆင်ပေးခြင်း။",
-pricingTitle:"ဝန်ဆောင်မှု Package များ", pricingSubtitle:"သင့်လုပ်ငန်းနှင့် သင့်တော်သော Package ကို ရွေးချယ်ပါ",
-starterDesc:"ဆိုင်ငယ်များနှင့် လုပ်ငန်းငယ်များအတွက်", starter1:"စာမျက်နှာတစ်မျက်နှာ Website", starter2:"ဖုန်းတွင် အသုံးပြုနိုင်ခြင်း", starter3:"လုပ်ငန်းဆက်သွယ်ရန် အချက်အလက်",
-businessDesc:"အချက်အလက်ပိုမိုပြည့်စုံစွာ ဖော်ပြလိုသော လုပ်ငန်းများအတွက်", business1:"စာမျက်နှာများစွာ ပါဝင်ခြင်း", business2:"ကုန်ပစ္စည်းနှင့် ဝန်ဆောင်မှုများ", business3:"ဖောက်သည်ဆက်သွယ်ရန် နည်းလမ်းများ",
-premiumDesc:"စိတ်ကြိုက် Website လိုအပ်သော လုပ်ငန်းများအတွက်", premium1:"စိတ်ကြိုက် ဒီဇိုင်း", premium2:"ထပ်ဆောင်းလုပ်ဆောင်ချက်များ", premium3:"Website ထိန်းသိမ်းမှု အစီအစဉ်",
-priceNote:"ဖော်ပြထားသော ဈေးနှုန်းများသည် စတင်ဈေးနှုန်း ဥပမာများသာ ဖြစ်သည်။ အမှန်တကယ်ဈေးနှုန်းသည် လုပ်ငန်းလိုအပ်ချက်ပေါ် မူတည်သည်။ Domain နှင့် Hosting အတွက် အပိုကုန်ကျစရိတ် ရှိနိုင်သည်။",
-contactTitle:"သင့် Website ကို စတင်ဖန်တီးဖို့ အသင့်ဖြစ်ပြီလား?", contactText:"သင့်လုပ်ငန်းနှင့် လိုအပ်ချက်များကို ဆွေးနွေးပြီး သင့်တော်သော Website အစီအစဉ်ကို ရေးဆွဲနိုင်ပါသည်။",
-contactButton:"ဆက်သွယ်ရန်", contactNote:"ဆက်သွယ်ရန် အချက်အလက်များကို နောက်အဆင့်တွင် ထည့်သွင်းပါမည်။",
-footerText:"မူပိုင်ခွင့်အားလုံး လက်ဝယ်ရှိသည်။", tagline:"Your Business. Your Website."
+my:{
+menuHeading:"စတင်ဖန်တီးလိုက်ပါ — သင့် Website",
+menuHome:"ပင်မ",menuServices:"ဝန်ဆောင်မှုများ",menuPricing:"ဈေးနှုန်းများ",menuSamples:"နမူနာဒီဇိုင်း",menuAbout:"လုပ်ငန်းအကြောင်း",menuContact:"ဆက်သွယ်ရန်",menuFaq:"မေးလေ့ရှိသောမေးခွန်း",
+heroTitle:"ကောင်းမွန်သော Website<br>ဖြင့် လုပ်ငန်းကို တိုးတက်စေပါ",heroText:"သင့်လုပ်ငန်းအတွက် Website တစ်ခု ဖန်တီးပါ။ ဖောက်သည်များ ရှာဖွေရလွယ်ကူပြီး ဖုန်းတွင်လည်း အဆင်ပြေစွာ အသုံးပြုနိုင်ပါသည်။",heroButton:"ဝန်ဆောင်မှုများ ကြည့်ရန်",
+servicesTitle:"ကျွန်ုပ်တို့၏ ဝန်ဆောင်မှုများ",servicesSubtitle:"သင့်လုပ်ငန်းအတွက် အွန်လိုင်းဝန်ဆောင်မှုများ",service1Title:"Website ဒီဇိုင်း",service1Text:"ဖုန်းနှင့် ကွန်ပျူတာများတွင် အသုံးပြုနိုင်သော ခေတ်မီလှပသည့် Website များ။",service2Title:"လုပ်ငန်းသုံး Website",service2Text:"ကုန်ပစ္စည်း၊ ဝန်ဆောင်မှု၊ ဆိုင်အချက်အလက်နှင့် ဆက်သွယ်ရန်အချက်အလက်များ ဖော်ပြနိုင်သည်။",service3Title:"လစဉ် Website ထိန်းသိမ်းမှု",service3Text:"ရွေးချယ်ထားသော Package အလိုက် Website ကို ထိန်းသိမ်းပြီး အချက်အလက်များ ပြင်ဆင်ပေးခြင်း။",
+pricingTitle:"ဝန်ဆောင်မှု Package များ",pricingSubtitle:"သင့်လုပ်ငန်းနှင့် သင့်တော်သော Package ကို ရွေးချယ်ပါ",starterDesc:"ဆိုင်ငယ်များနှင့် လုပ်ငန်းငယ်များအတွက်",starter1:"စာမျက်နှာတစ်မျက်နှာ Website",starter2:"ဖုန်းတွင် အသုံးပြုနိုင်ခြင်း",starter3:"လုပ်ငန်းဆက်သွယ်ရန် အချက်အလက်",businessDesc:"အချက်အလက်ပြည့်စုံစွာ ဖော်ပြလိုသော လုပ်ငန်းများအတွက်",business1:"စာမျက်နှာများစွာ ပါဝင်ခြင်း",business2:"ကုန်ပစ္စည်းနှင့် ဝန်ဆောင်မှုများ",business3:"ဖောက်သည်ဆက်သွယ်ရန် နည်းလမ်းများ",premiumDesc:"စိတ်ကြိုက် Website လိုအပ်သော လုပ်ငန်းများအတွက်",premium1:"စိတ်ကြိုက် ဒီဇိုင်း",premium2:"ထပ်ဆောင်းလုပ်ဆောင်ချက်များ",premium3:"Website ထိန်းသိမ်းမှု အစီအစဉ်",priceNote:"ဖော်ပြထားသော ဈေးနှုန်းများသည် စတင်ဈေးနှုန်း ဥပမာများသာ ဖြစ်သည်။ Domain နှင့် Hosting အတွက် အပိုကုန်ကျစရိတ် ရှိနိုင်သည်။",
+samplesTitle:"Website နမူနာများ",samplesSubtitle:"လုပ်ငန်းအမျိုးအစားအလိုက် Website ပုံစံနမူနာများ",sample1Title:"Online Shop",sample1Text:"ကုန်ပစ္စည်း၊ အသေးစိတ်နှင့် မှာယူရန်အချက်အလက်များ ဖော်ပြခြင်း",sample2Title:"လုပ်ငန်းသုံး Website",sample2Text:"လုပ်ငန်း၊ ဝန်ဆောင်မှုနှင့် ဆက်သွယ်ရန်အချက်အလက် မိတ်ဆက်ခြင်း",sample3Title:"ဝန်ဆောင်မှု Website",sample3Text:"ဝန်ဆောင်မှု၊ ဈေးနှုန်းနှင့် ဆက်သွယ်ရန်နည်းလမ်းများ ဖော်ပြခြင်း",sampleNote:"ဤနမူနာများကို လုပ်ငန်းလိုအပ်ချက်အလိုက် ပြင်ဆင်နိုင်သည်။",
+aboutTitle:"လုပ်ငန်းအကြောင်း",aboutSubtitle:"သင့်လုပ်ငန်းနှင့် သင့်တော်သော Website",aboutText1:"EQUAL WEB သည် ဆိုင်များနှင့် လုပ်ငန်းများအတွက် Website ဒီဇိုင်းရေးဆွဲခြင်းနှင့် တည်ဆောက်ခြင်း ဝန်ဆောင်မှုပေးသည်။ အသုံးပြုရလွယ်ကူပြီး ဖုန်းတွင်လည်း ကြည့်ကောင်းစေရန်နှင့် ဖောက်သည်များ ဆက်သွယ်ရလွယ်ကူစေရန် အလေးထားသည်။",aboutText2:"ထိုင်း၊ အင်္ဂလိပ်နှင့် မြန်မာဘာသာများကို ပံ့ပိုးပြီး လုပ်ငန်းတစ်ခုချင်းစီ၏ လိုအပ်ချက်နှင့် ကိုက်ညီအောင် စီစဉ်ပေးသည်။",
+contactTitle:"သင့် Website ကို စတင်ဖန်တီးဖို့ အသင့်ဖြစ်ပြီလား?",contactText:"သင့်လုပ်ငန်းနှင့် လိုအပ်ချက်များကို ဆွေးနွေးပြီး သင့်တော်သော Website အစီအစဉ်ကို ရေးဆွဲနိုင်ပါသည်။",
+faqTitle:"မေးလေ့ရှိသော မေးခွန်းများ",faqSubtitle:"Website မစတင်မီ သိထားသင့်သော အချက်များ",faqQ1:"Website တစ်ခု ပြုလုပ်ရန် အချိန်ဘယ်လောက်ကြာမလဲ?",faqA1:"စာမျက်နှာအရေအတွက်၊ အကြောင်းအရာနှင့် လိုအပ်သောလုပ်ဆောင်ချက်များပေါ် မူတည်သည်။ အသေးစိတ်သတ်မှတ်ပြီးနောက် အချိန်ဇယားကို အသိပေးပါမည်။",faqQ2:"ဖုန်းမှာ အသုံးပြုလို့ရပါသလား?",faqA2:"ဖုန်း၊ Tablet နှင့် ကွန်ပျူတာများတွင် အဆင်ပြေစွာ အသုံးပြုနိုင်သည်။",faqQ3:"ဘာသာစကား ပြောင်းလို့ရပါသလား?",faqA3:"ဤ Website နမူနာတွင် ထိုင်း၊ အင်္ဂလိပ်နှင့် မြန်မာဘာသာများ ပါဝင်သည်။",faqQ4:"Package ဈေးနှုန်းထဲမှာ Domain နဲ့ Hosting ပါဝင်ပါသလား?",faqA4:"စတင်ဈေးနှုန်းတွင် Domain နှင့် Hosting ကုန်ကျစရိတ် မပါဝင်ပါ။ အပိုကုန်ကျစရိတ်ရှိပါက အလုပ်မစမီ အသိပေးပါမည်။",footerText:"မူပိုင်ခွင့်အားလုံး လက်ဝယ်ရှိသည်။"
 }
 };
-
-const languageSelect = document.getElementById("language");
-
-function changeLanguage(lang = "th") {
-  const words = translations[lang] || translations.th;
-  document.documentElement.lang = lang;
-  document.querySelectorAll("[data-i18n]").forEach(element => {
-    const key = element.dataset.i18n;
-    if (words[key] !== undefined) element.innerHTML = words[key];
+const buttons=[...document.querySelectorAll("[data-view]")];
+function showView(name){
+  document.querySelectorAll(".view").forEach(v=>v.classList.toggle("active",v.id==="view-"+name));
+  buttons.forEach(b=>b.classList.toggle("active",b.dataset.view===name));
+  window.scrollTo({top:0,behavior:"smooth"});
+}
+buttons.forEach(b=>b.addEventListener("click",()=>showView(b.dataset.view)));
+document.querySelectorAll("[data-go]").forEach(b=>b.addEventListener("click",()=>showView(b.dataset.go)));
+function changeLanguage(lang){
+  const words=translations[lang]||translations.th;
+  document.documentElement.lang=lang;
+  document.querySelectorAll("[data-i18n]").forEach(el=>{
+    const key=el.dataset.i18n;
+    if(words[key]!==undefined)el.innerHTML=words[key];
   });
 }
-
-languageSelect.addEventListener("change", event => {
-  changeLanguage(event.target.value);
-});
-
-document.getElementById("year").textContent = new Date().getFullYear();
+document.getElementById("language").addEventListener("change",e=>changeLanguage(e.target.value));
+document.getElementById("year").textContent=new Date().getFullYear();
 changeLanguage("th");
 </script>
 </body>
